@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Biodata – Shraddha Srivastava</title>
+    <meta name="description" content="Biodata of Shraddha Srivastava – Education, Family Details, and Background.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;500;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Animated hint overlay -->
+    <div class="swipe-hint" id="swipeHint">
+        <div class="hint-content">
+            <div class="hint-hand">👆</div>
+            <p>Swipe or tap to turn the page</p>
+        </div>
+    </div>
+
+    <!-- Page indicator -->
+    <div class="page-indicator" id="pageIndicator">
+        <span class="dot active" data-page="0"></span>
+        <span class="dot" data-page="1"></span>
+        <span class="dot" data-page="2"></span>
+        <span class="dot" data-page="3"></span>
+        <span class="dot" data-page="4"></span>
+        <span class="dot" data-page="5"></span>
+        <span class="dot" data-page="6"></span>
+        <span class="dot" data-page="7"></span>
+    </div>
+
+    <!-- Navigation arrows -->
+    <button class="nav-arrow nav-prev disabled" id="prevBtn" aria-label="Previous page">&#10094;</button>
+    <button class="nav-arrow nav-next" id="nextBtn" aria-label="Next page">&#10095;</button>
+
+    <!-- Background Music -->
+    <audio id="bgMusic" loop preload="auto">
+        <source src="bg-music.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Music Toggle Button -->
+    <button class="music-toggle" id="musicToggle" aria-label="Toggle music">
+        <span class="music-icon muted" id="musicIcon">🔇</span>
+        <span class="music-label" id="musicLabel">Play Music</span>
+    </button>
+
+
+    <!-- The Book -->
+    <div class="book-wrapper">
+        <div class="book" id="book">
+
+            <!-- Page 0: Cover -->
+            <div class="page cover-page" id="page-0" style="z-index:8;">
+                <div class="cover-border">
+                    <div class="cover-corner tl"></div>
+                    <div class="cover-corner tr"></div>
+                    <div class="cover-corner bl"></div>
+                    <div class="cover-corner br"></div>
+                    <div class="cover-content">
+                        <div class="om-symbol">ॐ</div>
+                        <div class="decorative-line"></div>
+                        <p class="cover-label">Biodata</p>
+                        <h1 class="cover-name">Shraddha<br>Srivastava</h1>
+                        <div class="decorative-line"></div>
+                        <p class="cover-subtext">श्री गणेशाय नमः</p>
+                    </div>
+                </div>
+                <!-- Page edge illusion -->
+                <div class="page-edge"></div>
+            </div>
+
+            <!-- Page 1: Education -->
+            <div class="page cream-page" id="page-1" style="z-index:7;">
+                <div class="page-inner">
+                    <div class="page-ornament-top"></div>
+                    <h2 class="page-title">Education</h2>
+                    <div class="divider"></div>
+                    <div class="info-block">
+                        <div class="info-item">
+                            <span class="info-icon">🎓</span>
+                            <p class="info-main">B.Sc. (Biotechnology)</p>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">🏛️</span>
+                            <p class="info-main">M.Sc. (Bioinformatics)</p>
+                            <p class="info-sub">Banaras Hindu University</p>
+                        </div>
+                        <div class="info-item highlight-item">
+                            <span class="info-icon">⭐</span>
+                            <p class="info-main">GATE Qualified</p>
+                        </div>
+                    </div>
+                    <div class="page-ornament-bottom"></div>
+                    <div class="page-number">1</div>
+                </div>
+                <div class="page-edge"></div>
+            </div>
+
+            <!-- Page 2: Family Details -->
+            <div class="page cream-page" id="page-2" style="z-index:6;">
+                <div class="page-inner">
+                    <div class="page-ornament-top"></div>
+                    <h2 class="page-title">Family Details</h2>
+                    <div class="divider"></div>
+
+                    <div class="family-card">
+                        <h3 class="relation-label">Father</h3>
+                        <p class="person-name">Mr. Shailendra Srivastava</p>
+                        <p class="person-detail">B.Sc., A.M.I.E. (Mechanical Engg.)</p>
+                        <p class="person-detail">Project Head, HVAC Company, Ahmedabad</p>
+                    </div>
+
+                    <div class="family-card">
+                        <h3 class="relation-label">Mother</h3>
+                        <p class="person-name">Mrs. Durgesh Nandini Srivastava</p>
+                        <p class="person-detail">M.A., M.Phil., B.Ed.</p>
+                        <p class="person-detail">Hindi Teacher (TGT)</p>
+                    </div>
+
+                    <div class="family-card">
+                        <h3 class="relation-label">Brother</h3>
+                        <p class="person-name">Shivam Srivastava</p>
+                        <p class="person-detail">B.Tech (CSE)</p>
+                        <p class="person-detail">Business Analyst at Odoo, Gandhinagar</p>
+                    </div>
+
+                    <div class="page-ornament-bottom"></div>
+                    <div class="page-number">2</div>
+                </div>
+                <div class="page-edge"></div>
+            </div>
+
+            <!-- Page 3: Grandparents -->
+            <div class="page cream-page" id="page-3" style="z-index:5;">
+                <div class="page-inner">
+                    <div class="page-ornament-top"></div>
+                    <h2 class="page-title">Grandparents</h2>
+                    <div class="divider"></div>
+
+                    <h3 class="sub-heading">Paternal</h3>
+                    <div class="family-card compact">
+                        <p class="person-name">Late Mr. I.C. Srivastava</p>
+                        <p class="person-detail">Retired Officer, U.P. State Government</p>
+                    </div>
+                    <div class="family-card compact">
+                        <p class="person-name">Late Mrs. Ram Devi Srivastava</p>
+                        <p class="person-detail">Homemaker</p>
+                    </div>
+
+                    <h3 class="sub-heading">Maternal</h3>
+                    <div class="family-card compact">
+                        <p class="person-name">Late Mr. Shiv Narayan Sahai Srivastava</p>
+                        <p class="person-detail">Retired P.R.I., Indian Postal Dept., Barabanki</p>
+                    </div>
+                    <div class="family-card compact">
+                        <p class="person-name">Mrs. Prema Devi</p>
+                        <p class="person-detail">Homemaker, Barabanki</p>
+                    </div>
+
+                    <div class="page-ornament-bottom"></div>
+                    <div class="page-number">3</div>
+                </div>
+                <div class="page-edge"></div>
+            </div>
+
+            <!-- Page 4: Paternal Uncles & Aunts -->
+            <div class="page cream-page" id="page-4" style="z-index:4;">
+                <div class="page-inner">
+                    <div class="page-ornament-top"></div>
+                    <h2 class="page-title">Paternal Side</h2>
+                    <div class="divider"></div>
+
+                    <div class="family-card">
+                        <h3 class="relation-label">Elder Uncle &amp; Aunt</h3>
+                        <p class="person-name">Mr. B.K. Srivastava</p>
+                        <p class="person-detail">Mechanical Engineer, Electronics Industry, Faridabad</p>
+                        <p class="person-name mt-sm">Mrs. Alka Srivastava</p>
+                        <p class="person-detail">M.A., B.Ed. – Music Teacher, Faridabad</p>
+                    </div>
+
+                    <div class="family-card">
+                        <h3 class="relation-label">Elder Uncle &amp; Aunt</h3>
+                        <p class="person-name">Mr. A.K. Srivastava</p>
+                        <p class="person-detail">Retd. Dy. Commissioner, RAW, New Delhi</p>
+                        <p class="person-name mt-sm">Mrs. Sangeeta Srivastava</p>
+                        <p class="person-detail">Director, Ministry of Finance, New Delhi</p>
+                    </div>
+
+                    <div class="family-card">
+                        <h3 class="relation-label">Fufaji &amp; Buwa</h3>
+                        <p class="person-name">Mr. Rama Shankar Srivastava</p>
+                        <p class="person-detail">Retd. Officer, Indian Air Force, Lucknow</p>
+                        <p class="person-name mt-sm">Mrs. Ranjana Srivastava</p>
+                        <p class="person-detail">Homemaker</p>
+                    </div>
+
+                    <div class="page-ornament-bottom"></div>
+                    <div class="page-number">4</div>
+                </div>
+                <div class="page-edge"></div>
+            </div>
+
+            <!-- Page 5: Maternal Side -->
+            <div class="page cream-page" id="page-5" style="z-index:3;">
+                <div class="page-inner">
+                    <div class="page-ornament-top"></div>
+                    <h2 class="page-title">Maternal Side</h2>
+                    <div class="divider"></div>
+
+                    <div class="family-card">
+                        <h3 class="relation-label">Mama &amp; Mami</h3>
+                        <p class="person-name">Mr. Santosh Kumar Srivastava</p>
+                        <p class="person-detail">B.Sc., MBA</p>
+                        <p class="person-detail">Regional Manager, Bharti AXA Life Insurance, Lucknow</p>
+                        <p class="person-name mt-sm">Mrs. Aradhana Srivastava</p>
+                        <p class="person-detail">Housewife</p>
+                    </div>
+
+                    <div class="family-card">
+                        <h3 class="relation-label">Mama &amp; Mami</h3>
+                        <p class="person-name">Mr. Gyan Prakash Srivastava</p>
+                        <p class="person-detail">B.Tech (IIT Kanpur), Post Doctorate (USA)</p>
+                        <p class="person-detail">Assoc. Director, Alexion Pharmaceuticals, USA</p>
+                        <p class="person-name mt-sm">Mrs. Sikha Srivastava</p>
+                        <p class="person-detail">MBA – Managing Kumaon Institute (Franchise), USA</p>
+                    </div>
+
+                    <div class="page-ornament-bottom"></div>
+                    <div class="page-number">5</div>
+                </div>
+                <div class="page-edge"></div>
+            </div>
+
+            <!-- Page 6: Maternal Side continued -->
+            <div class="page cream-page" id="page-6" style="z-index:2;">
+                <div class="page-inner">
+                    <div class="page-ornament-top"></div>
+                    <h2 class="page-title">Maternal Side</h2>
+                    <p class="page-subtitle">(continued)</p>
+                    <div class="divider"></div>
+
+                    <div class="family-card">
+                        <h3 class="relation-label">Mama &amp; Mami</h3>
+                        <p class="person-name">Mr. Puneet Kumar Srivastava</p>
+                        <p class="person-detail">B.Sc.</p>
+                        <p class="person-detail">Area Manager, Pharma Company, Barabanki</p>
+                        <p class="person-name mt-sm">Mrs. Narayani Srivastava</p>
+                        <p class="person-detail">M.A., B.Ed., M.Ed.</p>
+                        <p class="person-detail">School Teacher, Barabanki</p>
+                    </div>
+
+                    <div class="page-ornament-bottom"></div>
+                    <div class="page-number">6</div>
+                </div>
+                <div class="page-edge"></div>
+            </div>
+
+            <!-- Page 7: Back Cover -->
+            <div class="page cover-page back-cover" id="page-7" style="z-index:1;">
+                <div class="cover-border">
+                    <div class="cover-corner tl"></div>
+                    <div class="cover-corner tr"></div>
+                    <div class="cover-corner bl"></div>
+                    <div class="cover-corner br"></div>
+                    <div class="cover-content">
+                        <div class="om-symbol small-om">ॐ</div>
+                        <div class="decorative-line"></div>
+                        <p class="cover-subtext">शुभ विवाह</p>
+                        <p class="end-flowers">❀ ❀ ❀</p>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- /book -->
+    </div><!-- /book-wrapper -->
+
+    <script src="script.js"></script>
+</body>
+</html>
